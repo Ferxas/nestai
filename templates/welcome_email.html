@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido/a a NestAi!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/email_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <h1>¡Bienvenido/a a NestAi! 💚</h1>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="body">
+            <!-- Contenedor de texto -->
+            <div class="text-section">
+                <p>¡Hola <strong>{{ donor_name }}</strong>! 👋</p>
+                <p>
+                    Queríamos darte la bienvenida a la familia de NestAi. 
+                    ¡Es un honor que hayas decidido sumarte a esta comunidad! 🙌 
+                    Gracias a ti, hoy estamos un paso más cerca de hacer una diferencia 
+                    en la vida de personas que realmente lo necesitan.
+                </p>
+                <p>
+                    En NestAi, creemos en el poder de las personas como tú para cambiar el mundo, 
+                    un acto de generosidad a la vez. Prepárate, porque tenemos grandes cosas por delante, 
+                    y nos emociona mucho tenerte a bordo.
+                </p>
+                <p>
+                    Estamos aquí para cualquier cosa que necesites. 
+                    ¡Gracias por estar con nosotros y por confiar en esta misión! 💌
+                </p>
+                <p>
+                    Con tu bienvenida, puedes <a href="{{ calendar_url }}" target="_blank">ver nuestro calendario anual</a>, 
+                    diseñado especialmente para ti. ¡Esperamos que te guste!
+                </p>
+            </div>
+
+            <!-- Contenedor de imagen inspiradora -->
+            <div class="image-section">
+                <img src="{{ url_for('static', filename='img/welcome_email.webp') }}" alt="Imagen inspiradora">
+            </div>
+
+            <!-- Contenedor de imagen de calendario -->
+            <div class="calendar-section">
+                <p>¡Consulta nuestro calendario anual a continuación!</p>
+                <img src="{{ calendar_url }}" alt="Calendario anual">
+            </div>
+        </div>
+
+        <!-- Pie de página con logo -->
+        <div class="footer">
+            <p>Con cariño,</p>
+            <p>El equipo de NestAi</p>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de NestAi">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu apoyo cambia vidas: una historia especial para ti 💫</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/email_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <h1>Tu apoyo cambia vidas: una historia especial para ti 💫</h1>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="body">
+            <!-- Contenedor de texto -->
+            <div class="text-section">
+                <p>¡Hola <strong>{{ donor_name }}</strong>! 🌈</p>
+                <p>
+                    Esperamos que estés bien. Hoy queríamos compartir algo especial contigo… 💌 
+                    A veces, las palabras no bastan para expresar lo que tu apoyo ha significado, 
+                    así que te contamos una historia de vida que tú has ayudado a cambiar:
+                </p>
+                <blockquote>
+                    <p><strong>Aminata</strong>, una mujer inmigrante de origen africano, llegó a este país enfrentando grandes barreras de racismo y exclusión social. Sin embargo, gracias al apoyo de NestAi y a personas increíbles como tú, Aminata encontró un empleo digno y estable, lo que le permitió superar estas dificultades y construir una nueva vida llena de oportunidades.</p>
+                </blockquote>
+                <p>
+                    Ahora queremos mostrarte cómo está Aminata hoy. Ella nos envió este video desde su lugar de trabajo para agradecerte por tu apoyo. ¡Mira cómo su vida ha cambiado gracias a personas como tú! 🎥
+                </p>
+            </div>
+
+            <!-- Contenedor de video -->
+            <div class="video-section">
+                <video controls style="max-width: 100%; height: auto;">
+                    <source src="{{ url_for('static', filename='videos/aminata.mp4') }}" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+
+            <!-- Contenedor de imagen -->
+            <div class="image-section">
+                <img src="{{ url_for('static', filename='img/story_email.webp') }}" alt="Imagen de esperanza e impacto">
+            </div>
+        </div>
+
+        <!-- Pie de página con logo -->
+        <div class="footer">
+            <p>Con cariño y gratitud,</p>
+            <p>El equipo de NestAi</p>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de NestAi">
+        </div>
+    </div>
+</body>
+</html>

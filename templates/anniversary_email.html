@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz aniversario con NestAi! 🎉</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/email_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Feliz aniversario con NestAi! 🎉</h1>
+        </div>
+        <div class="body">
+            <p>¡Hola <strong>{{ donor_name }}</strong>! 🎂</p>
+            <p>
+                ¡Hoy estamos celebrando un año desde que decidiste formar parte de NestAi! 🎈 
+                Gracias a tu generosidad, muchas vidas han cambiado, y no podríamos estar más agradecidos. 
+                ¡Eres increíble!
+            </p>
+            <p>
+                Para agradecerte, nuestros amigos de <strong>Talkual Foods</strong>, 
+                una empresa dedicada a salvar frutas y verduras, quieren ayudarte a apoyar nuestra misión. 
+                Usa el código <strong>TALKUAL2</strong> en tu próxima compra y recibirás 
+                <strong>2€ de descuento</strong>. Además, esos 2€ serán destinados a nuestra campaña de pobreza y exclusión social. 🌟
+            </p>
+            <p>
+                <a href="https://www.talkualfoods.com/" target="_blank">Haz clic aquí para usar tu descuento</a>
+            </p>
+            <p>
+                ¡Gracias por seguir creyendo en nuestra misión! Esperamos seguir contando contigo para lograr más magia juntos. 💚
+            </p>
+            <div>
+                <img src="{{ url_for('static', filename='img/poverty.webp') }}" alt="Campaña contra la pobreza" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                Ve al siguiente enlace para conocer más sobre nuestra campaña de pobreza y exclusión social:
+                <a href="https://www.nestai.com" target="_blank">www.nestai.com</a>
+            </p>
+        </div>
+        <div class="footer">
+            <p>Con todo el cariño del mundo,</p>
+            <p>El equipo de NestAi</p>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de NestAi" style="max-width: 120px; height: auto;">
+        </div>
+    </div>
+</body>
+</html>
